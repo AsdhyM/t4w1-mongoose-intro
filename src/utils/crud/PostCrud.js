@@ -19,7 +19,7 @@ async function findOnePost (query) {
     return result;
 }
 
-async function findManyPosts () {
+async function findManyPosts (query) {
     let result = await PostModel.find(query);
 
     return result;
