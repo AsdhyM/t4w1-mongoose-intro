@@ -22,7 +22,8 @@ app.get("/", (request, response) => {
     });
 });
 
-
+const PostController = require("./controllers/PostController.js");
+app.use("/posts", PostController);
 
 // Server app configuratin is finished by this point
 
