@@ -18,6 +18,22 @@ router.get("/search/:postId", async (request, response) => {
     });
 });
 
+router.get("/query", async (request, response) => {
+    // Get the query from the request.body
+    console.log(request.body.query);
+    let query = request.body.query;
+
+    // let {query} = request.body
+
+    // use the query in a Post CRUD function
+    let result = await findOnePost(query);
+
+    // return the result
+    response.json({
+        data: result
+    });
+});
+
 // get all posts
 router.get("/all", async (request, response) => {
 
