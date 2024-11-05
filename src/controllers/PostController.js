@@ -1,7 +1,8 @@
 const express = require("express");
 
-const { PostModel } = require("../modules/PostModule");
+
 const { findOnePost, findManyPosts } = require("../utils/crud/PostCrud");
+const { PostModel } = require("../modules/PostModel");
 
 const router = express.Router();
 

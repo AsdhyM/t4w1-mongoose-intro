@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { PostModel } = require("../modules/PostModule");
+const { PostModel } = require("../modules/PostModel");
 
 
 // Function to connect to whatever DB our environment variable says to connect to
