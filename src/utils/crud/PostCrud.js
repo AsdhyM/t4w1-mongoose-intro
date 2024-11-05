@@ -2,10 +2,11 @@
 
 const { PostModel } = require("../../modules/PostModel")
 
-async function createPost (title, content = null) {
+async function createPost (title, content = null, authorId) {
     let result = await PostModel.create({
         title: title,
-        content: content
+        content: content,
+        author: authorId
         // Leaving "date" out since its default is Date.now
     });
 
