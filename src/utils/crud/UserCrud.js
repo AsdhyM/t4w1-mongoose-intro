@@ -1,6 +1,6 @@
 // Provide CRUD functions for the UserModel
 
-const { UserModel } = require("../../modules/UserModel")
+const { UserModel } = require("../../models/UserModel")
 
 async function createUser (username, isOver18, email) {
     let result = await UserModel.create({

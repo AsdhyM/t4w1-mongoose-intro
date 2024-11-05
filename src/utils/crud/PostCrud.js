@@ -1,6 +1,6 @@
 // Provide CRUD functions for the PostModel
 
-const { PostModel } = require("../../modules/PostModel")
+const { PostModel } = require("../../models/PostModel")
 
 async function createPost (title, content = null, authorId) {
     let result = await PostModel.create({
@@ -15,7 +15,7 @@ async function createPost (title, content = null, authorId) {
 
 // findOnePost({title:"Alex's Cool Blog Post"});
 async function findOnePost (query) {
-    let result = await PostModel.findOne(query);
+    let result = await PostModel.findOne(query).populate("author");
 
     return result;
 }
