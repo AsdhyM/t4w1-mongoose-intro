@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { LocalizedContentModel, LocalizedContentSchema } = require("./LocalizedContent");
+const { LocalizedContentSchema } = require("./LocalizedContent");
 
 // 1. Make a schema
 // const someSchema = new mongoose.Schema(ObjectDefiningDataRules, SchemaOptions);
